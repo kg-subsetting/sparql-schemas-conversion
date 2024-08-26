@@ -1,0 +1,19 @@
+PREFIX : <http://bio2rdf.org/intermine_voc:>
+
+<Gene> {
+ a          [ :Gene ]   ;
+ :symbol    .           ;
+ :secondaryIdentifier . ;
+ :chromosomeLocation_id @<Location>
+ :chromosome_id ?chromosome_id .
+  
+}
+SELECT * 
+WHERE { 
+  ?chromosome_id :primaryIdentifier ?chromosome_primaryidentifier .
+  ?location_id :start ?start .
+  ?location_id :end ?end .
+  ?location_id :strand ?strand .
+  FILTER (?chromosome_primaryidentifier = '2L') .
+}
+ORDER BY ?secondaryidentifier
