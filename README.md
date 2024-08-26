@@ -1,2 +1,4 @@
-# sparql-schemas-conversion
-Project created as part of Biohackathon 2024 - Fukushima
+# SPARQL - Schemas conversion
+
+Notes about the SPARQL-Schemas conversion project
+
